@@ -12,14 +12,12 @@ public class Solution {
 
         for(int i= 1; i<score.length; i++){
             if(score[i]<lr){
-                lr=score[i];
                l++;
             }else if(score[i]>hr){
-                hr=score[i];
                 h++;
             }
         }
-        return new int[]{h,l}; 
+        return {h,l}; 
     }
 
     public static void main(String[] args) {
