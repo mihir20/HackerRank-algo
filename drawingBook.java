@@ -7,10 +7,14 @@ import java.util.regex.*;
 public class Solution {
 
     static int solve(int n, int p){
-        if (p<n/2){
+        if (p<=n/2){
             return p/2;
         }else{
-            return (n-p)/2;
+            if(n%2==0){
+                return (n-p+1)/2;
+            }else{
+                return (n-p)/2;
+            }
         }
     }
 
