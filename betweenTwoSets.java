@@ -48,7 +48,7 @@ public class Solution {
         
         int x=0;
         int z = getMaxValue(b);
-        for(int i =1; i<=z; i++){
+        for(int i = getMaxValue(a); i<=z; i++){
             if(inB(i,b)){
                 if(inA(i,a)){
                     x++;
