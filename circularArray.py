@@ -3,16 +3,12 @@
 import sys
 
 def circularArrayRotation(a, m, k):
-    for i in range(k):
-        b=a[len(a)-1]
-        for j in range(len(a)-1,-1,-1):
-            if j == 0:
-                a[j]=b
-            else :
-                a[j]=a[j-1]
-    c = []
-    for l in m:
-        c.append(a[l])
+    c=[]
+    for i in m:
+        if i-k >= 0 :
+            c.append(a[i-k])
+        else :
+            c.append(a[len(a)+i-k])
     return c
 
 if __name__ == "__main__":
@@ -26,5 +22,3 @@ if __name__ == "__main__":
        m.append(m_t)
     result = circularArrayRotation(a, m, k)
     print ("\n".join(map(str, result)))
-
-
